@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profile</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.profile-header{
+    background:var(--card);
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:25px;
+}
+
+.profile-info{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.avatar{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+}
+
+.user-text h2{
+    margin-bottom:8px;
+}
+
+.user-text p{
+    color:var(--muted);
+}
+
+.profile-stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:25px;
+}
+
+.stat-card{
+    background:var(--card);
+    padding:25px;
+    border-radius:18px;
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-5px);
+}
+
+.stat-card h3{
+    color:var(--muted);
+    margin-bottom:15px;
+}
+
+.stat-card p{
+    font-size:40px;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+
+        <div class="logo">
+            TaskFlow
+        </div>
+
+        <a href="dashboard.html">Dashboard</a>
+
+        <a href="tasks.html">Tasks</a>
+
+        <a href="create-task.html">Create Task</a>
+
+        <a href="analytics.html">Analytics</a>
+
+        <a href="profile.html">Profile</a>
+
+        <button
+        class="btn logout-btn"
+        onclick="logout()">
+        Logout
+        </button>
+
+    </div>
+
+    <div class="main">
+
+        <div class="profile-header">
+
+            <h1>Profile</h1>
+
+            <br>
+
+            <div class="profile-info">
+
+                <div class="avatar">
+                    👤
+                </div>
+
+                <div class="user-text">
+
+                    <h2 id="name">
+                        Loading...
+                    </h2>
+
+                    <p id="email">
+                        Loading...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="profile-stats">
+
+            <div class="stat-card">
+
+                <h3>Total Tasks</h3>
+
+                <p id="totalTasks">
+                    0
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>Completed Tasks</h3>
+
+                <p id="completedTasks">
+                    0
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>Pending Tasks</h3>
+
+                <p id="pendingTasks">
+                    0
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>In Progress</h3>
+
+                <p id="inProgressTasks">
+                    0
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/profile.js"></script>
+
+</body>
+</html>

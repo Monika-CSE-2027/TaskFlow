@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TaskFlow Register</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:#081229;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:40px;
+}
+
+.hero-left{
+    max-width:600px;
+}
+
+.hero-left h1{
+    font-size:80px;
+    color:white;
+    margin-bottom:10px;
+}
+
+.hero-left h3{
+    color:#3B82F6;
+    margin-bottom:20px;
+}
+
+.hero-left p{
+    color:#CBD5E1;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.auth-box{
+    width:450px;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 20px 50px rgba(0,0,0,0.4);
+}
+
+.auth-box h2{
+    text-align:center;
+    color:white;
+    margin-bottom:25px;
+}
+
+.auth-box input{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    background:#0F172A;
+    color:white;
+    border:none;
+    border-radius:12px;
+    box-sizing:border-box;
+}
+
+.btn{
+    width:100%;
+    padding:15px;
+    background:#2563EB;
+    color:white;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+}
+
+.auth-box p{
+    text-align:center;
+    margin-top:20px;
+    color:white;
+}
+
+.auth-box a{
+    color:#60A5FA;
+    text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+
+<div class="hero-left">
+
+<h1>TaskFlow</h1>
+
+<h3>Create Your Account</h3>
+
+<p>
+Organize tasks, monitor progress and
+improve productivity with TaskFlow.
+</p>
+
+</div>
+
+<div class="auth-box">
+
+<h2>Register</h2>
+
+<input
+type="text"
+id="name"
+placeholder="Full Name">
+
+<input
+type="email"
+id="email"
+placeholder="Email Address">
+
+<input
+type="password"
+id="password"
+placeholder="Password">
+
+<p id="errorMsg"
+style="
+display:none;
+color:#2563EB;
+text-align:center;
+margin-bottom:15px;
+font-weight:600;">
+</p>
+
+<p id="successMsg"
+style="
+display:none;
+color:#2563EB;
+text-align:center;
+margin-bottom:15px;
+font-weight:600;">
+
+Registration Successful 
+
+</p>
+
+<button
+class="btn"
+onclick="registerUser()">
+
+Create Account
+
+</button>
+
+<p>
+
+Already have an account?
+
+<a href="index.html">
+
+Login
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+<script src="js/register.js"></script>
+
+</body>
+</html>

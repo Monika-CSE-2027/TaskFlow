@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TaskFlow</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:#081229;
+    overflow:hidden;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:40px;
+}
+
+/* Left Side */
+
+.hero-left{
+    max-width:600px;
+    animation:slideLeft 1s ease;
+}
+
+.hero-left h1{
+    font-size:85px;
+    color:white;
+    margin-bottom:10px;
+}
+
+.hero-left h3{
+    color:#3B82F6;
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+.hero-left p{
+    color:#CBD5E1;
+    font-size:20px;
+    line-height:1.8;
+}
+
+.quote{
+    margin-top:40px;
+    color:#60A5FA;
+    font-size:24px;
+    font-style:italic;
+    min-height:70px;
+}
+
+/* Login Card */
+
+.auth-box{
+    width:430px;
+    padding:40px;
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+
+    box-shadow:0 20px 50px rgba(0,0,0,0.4);
+    animation:slideRight 1s ease;
+}
+
+.auth-box h2{
+    text-align:center;
+    color:white;
+    margin-bottom:25px;
+}
+
+.auth-box input{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#0F172A;
+    color:white;
+
+    box-sizing:border-box;
+}
+
+.auth-box input:focus{
+    outline:none;
+    box-shadow:0 0 10px #2563EB;
+}
+
+.btn{
+    width:100%;
+    padding:15px;
+    background:#2563EB;
+    color:white;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/*  LOGIN MESSAGE BOX */
+.login-msg{
+    text-align:center;
+    margin-top:12px;
+    font-size:14px;
+    min-height:18px;
+}
+
+.login-msg.error{
+    color:#5b44ef;
+}
+
+.login-msg.success{
+    color:#4522c5;
+}
+
+.auth-box p{
+    text-align:center;
+    margin-top:20px;
+    color:white;
+}
+
+.auth-box a{
+    color:#60A5FA;
+    text-decoration:none;
+}
+
+/* Floating Circles */
+
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(37,99,235,0.15);
+    animation:float 6s infinite ease-in-out;
+}
+
+.c1{
+    width:300px;
+    height:300px;
+    top:-100px;
+    left:-100px;
+}
+
+.c2{
+    width:220px;
+    height:220px;
+    bottom:-70px;
+    right:-70px;
+}
+
+.c3{
+    width:150px;
+    height:150px;
+    top:150px;
+    right:150px;
+}
+
+/* Animations */
+
+@keyframes float{
+0%,100%{ transform:translateY(0); }
+50%{ transform:translateY(-25px); }
+}
+
+@keyframes slideLeft{
+from{opacity:0; transform:translateX(-80px);}
+to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes slideRight{
+from{opacity:0; transform:translateX(80px);}
+to{opacity:1; transform:translateX(0);}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+<div class="circle c3"></div>
+
+<div class="hero">
+
+<!-- LEFT SIDE -->
+<div class="hero-left">
+
+<h1>TaskFlow</h1>
+
+<h3>Task Management System</h3>
+
+<p>
+Plan smarter.<br>
+Track progress.<br>
+Achieve goals effortlessly.
+</p>
+
+<div class="quote" id="quote">
+Success is the sum of small efforts repeated daily.
+</div>
+
+</div>
+
+<!-- LOGIN BOX -->
+<div class="auth-box">
+
+<h2>Login</h2>
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="password" id="password" placeholder="Password">
+
+<button class="btn" onclick="login()">
+Login
+</button>
+
+<!--  MESSAGE AREA ADDED -->
+<p id="loginMsg" class="login-msg"></p>
+
+<p>
+Don't have an account?
+<a href="register.html">Register</a>
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const quotes = [
+"Success is the sum of small efforts repeated daily.",
+"Small progress is still progress.",
+"Stay focused and never give up.",
+"Discipline beats motivation.",
+"Dream big. Start small. Act now."
+];
+
+let index = 0;
+
+setInterval(() => {
+index++;
+if(index >= quotes.length) index = 0;
+
+document.getElementById("quote").innerText = quotes[index];
+
+}, 3000);
+
+</script>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>
