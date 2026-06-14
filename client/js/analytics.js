@@ -14,7 +14,7 @@ async function loadAnalytics(){
 
         const response =
         await fetch(
-        "http://localhost:5000/api/tasks",
+        "https://taskflow-backend-q2ia.onrender.com/api/tasks",
         {
             headers:{
                 Authorization:token

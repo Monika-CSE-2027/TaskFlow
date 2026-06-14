@@ -39,7 +39,7 @@ async function loadTask() {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/tasks/${taskId}`,
+            `https://taskflow-backend-q2ia.onrender.com/api/tasks/${taskId}`,
             {
                 headers: {
                     Authorization: token
@@ -76,7 +76,7 @@ async function updateTask() {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/tasks/${taskId}`,
+            `https://taskflow-backend-q2ia.onrender.com/api/tasks/${taskId}`,
             {
                 method: "PUT",
                 headers: {

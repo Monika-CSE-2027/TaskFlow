@@ -37,7 +37,7 @@ async function registerUser(){
 
         const response =
         await fetch(
-        "http://localhost:5000/api/auth/register",
+        "https://taskflow-backend-q2ia.onrender.com/api/auth/register",
         {
             method:"POST",
 

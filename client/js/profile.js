@@ -14,7 +14,7 @@ async function loadProfile(){
 
         const response =
         await fetch(
-        "http://localhost:5000/api/profile",
+        "https://taskflow-backend-q2ia.onrender.com/api/profile",
         {
             headers:{
                 Authorization:token
